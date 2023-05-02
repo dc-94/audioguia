@@ -1,0 +1,96 @@
+:root{
+    width: 100vw;
+    height:min-content;
+    font-size: 4vw;
+    font-family: 'Josefin Sans', sans-serif;
+    color: antiquewhite;
+    background-color: #292929;
+}
+h1{
+    margin: 0;
+    font-size: 6vw;
+}
+p{
+    font-weight: 200;
+    word-wrap: normal;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    margin: 0;
+    padding: 0;
+    background-color: #141414e7;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    z-index: 1;
+}
+.header_title{
+    font-weight: 200;
+    font-size: larger;
+    text-align: center;
+    padding: 1rem;    
+}
+/* se agrega en la funcion de JS al scrollear */
+.sticky {
+    position: fixed;
+    top: 0;
+  }  
+  .sticky + section {
+    padding-top: 102px;
+  }
+
+main{
+    padding: 0.5rem;
+}
+.mainAudios{
+    width: 100%;
+}
+.audio_card{
+    display: inline-flex;
+    margin: 0.5rem 0.5rem;
+    background-color: #171717;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 15vh;
+    cursor: pointer;
+    position: relative;
+}
+.audio_card-link{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.audio_card-img, img{
+    width: auto;
+    height: 100%;
+    flex: 1 0;
+}
+.audio_card-txt{
+    padding: 0.8rem;
+    flex: 2 0;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;   
+}
+.audio_card-txt_year{
+    padding-left: 1.5rem;
+}
+.audio_card-txt_description{
+    color: aliceblue;
+    height: fit-content;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
