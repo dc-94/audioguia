@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <title>Audioguia Beatmemo</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <p class="header_title">AUDIO GUIA</p>
+    </header>
+    <main>
+
+            <div class="audio_card" id="">
+
+                <div class="audio_card-img">
+                    <input class="audio_card-img_playbtn" type="button" id="boton" value="Reproducir">
+                    <img class=" " src="./img/default2.jpg" alt="">
+                    <div class="audio_card-img_play"></div>
+                </div>
+                <div class="audio_card-txt">
+                    <div class="audio_card-txt_year">
+                        <h1>${Card.title}</h1>    
+                        <audio id="medio" controls src="/audio/btm001-1940:55.mp3" type='audio/mpeg; codecs="mp3"'></audio>
+                    </div>
+                    <div class="audio_card-txt_description">
+                        <p>${Card.desc}</p>
+                    </div>
+                </div>
+                           
+                
+            
+            </div>
+            <div class="audio_card" id="">
+
+                <div class="audio_card-img">
+                    <input class="audio_card-img_playbtn" type="button" id="boton1" value="Reproducir">
+                    <img class=" " src="./img/default2.jpg" alt="">
+                    <div class="audio_card-img_play"></div>
+                </div>
+                <div class="audio_card-txt">
+                    <div class="audio_card-txt_year">
+                        <h1>${title}</h1>    
+                        <audio id="medio1" controls src="/audio/btm010-1964.mp3" type='audio/mpeg; codecs="mp3"'></audio>
+                    </div>
+                    <div class="audio_card-txt_description">
+                        <p>${Card.desc}</p>
+                    </div>
+                </div>
+                           
+                
+            
+            </div>
+
+            <section class="mainAudios" id="mainAudios">
+            </section>
+
+            
+            
+            <script> 
+            function iniciar() { 
+               var boton=document.getElementById('boton1'); 
+               boton.addEventListener('click', presionar, false); 
+            } 
+            function presionar() { 
+                if(!medio1.paused && !medio1.ended)   { 
+                medio1.pause(); 
+                reproducir.value='Reproducir';   
+   } 
+   else 
+   { 
+      medio1.play(); 
+      reproducir.value='Pausa';   
+   } 
+} 
+            window.addEventListener('load', iniciar, false); 
+            </script> 
+    </main><script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/main.js"></script>
+</body>
+</html>

@@ -76,6 +76,11 @@ main{
     height: 100%;
     flex: 1 0;
 }
+.audio_card-img_playbtn{
+    position:absolute;
+    top: 50%;
+    left: 20%;
+}
 .audio_card-txt{
     padding: 0.8rem;
     flex: 2 0;
