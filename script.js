@@ -19,7 +19,7 @@ jQuery(function ($) {
         // initialize playlist and controls
         var index = 0,
             playing = false,
-            mediaPath = 'https://archive.org/download/btm_20230604',
+            mediaPath = '/audio/',
             extension = '',
             tracks = [{
                 "track": 1,
