@@ -4,14 +4,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 
 
-/* Global Styles
-================================================== */
-
 html,body {
 -webkit-font-smoothing:antialiased;
 -webkit-text-size-adjust:100%;
-background-color:#0665a2;
-color:#fff;
+background-color:#202020;
+color:#fff7e6;
 font-size:1rem;
 font-family:"Source Sans Pro", arial, sans-serif;
 font-weight:400;
@@ -25,7 +22,7 @@ box-sizing:border-box;
 }
 
 * {
--webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+-webkit-tap-highlight-color:rgba(107, 94, 94, 0);
 -webkit-tap-highlight-color:transparent;
 }
 
@@ -40,10 +37,10 @@ box-sizing:border-box;
 /* Typography / Links
 ================================================== */
 
-p { color:#fff; display:block; font-size:.9rem; font-weight:400; margin:0 0 2px; }
+p { color:#fff4f4; display:block; font-size:.9rem; font-weight:400; margin:0 0 2px; }
 
-a,a:visited { color:#8cc3e6; outline:0; text-decoration:underline; }
-a:hover,a:focus { color:#bbdef5; }
+a,a:visited { color:#e9a27c; outline:0; text-decoration:underline; }
+a:hover,a:focus { color:#ffda94; }
 p a,p a:visited { line-height:inherit; }
 
 
@@ -63,7 +60,7 @@ width:90%;
 }
 
 
-/* Audio Player Styles
+/*  Player 
 ================================================== */
 
 audio {
@@ -111,7 +108,7 @@ padding:21px 0;
 }
 
 #plList li:hover {
-background-color:rgba(0, 0, 0, .1);
+background-color:rgba(24, 24, 24, 0.775);
 }
 
 .plItem {
@@ -142,14 +139,14 @@ top:0;
 
 .plSel,
 .plSel:hover {
-background-color:rgba(0, 0, 0, .1);
-color:#fff;
+background-color:rgba(98, 70, 39, 0.643);
+color:#fcfcfc;
 cursor:default !important;
 }
 
 #tracks a {
 border-radius:3px;
-color:#fff;
+color:#f9f9f9;
 cursor:pointer;
 display:inline-block;
 font-size:2.3rem;
@@ -163,7 +160,7 @@ transition:background .3s ease;
 
 #tracks a:hover,
 #tracks a:active {
-background-color:rgba(0, 0, 0, .1);
+background-color:rgba(143, 132, 85, 0.445);
 color:#fff;
 }
 
@@ -173,7 +170,7 @@ padding:0;
 }
 
 
-/* Plyr Overrides
+/*
 ================================================== */
 
 .plyr--audio .plyr__controls {
@@ -189,7 +186,7 @@ a.plyr__controls__item.plyr__control:hover,
 .plyr--audio .plyr__controls button:hover,
 .plyr--audio .plyr__controls button.tab-focus:focus,
 .plyr__play-large {
-background-color:rgba(0, 0, 0, .1);
+background-color:rgba(90, 78, 0, 0.577);
 }
 
 .plyr__progress--played,
@@ -212,7 +209,7 @@ margin-left:7px;
 }
 
 
-/* Media Queries
+/* Mobile
 ================================================== */
 
 @media only screen and (max-width:600px) {

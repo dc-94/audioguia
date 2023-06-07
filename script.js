@@ -1,4 +1,3 @@
-// Mythium Archive: https://archive.org/details/mythium/
 
 jQuery(function ($) {
     'use strict'
@@ -13,193 +12,93 @@ jQuery(function ($) {
                 'current-time',
                 'mute',
                 'volume',
-                'download'
             ]
         });
         // initialize playlist and controls
         var index = 0,
             playing = false,
-            mediaPath = '/audio/',
+            mediaPath = './audio/',
             extension = '',
             tracks = [{
                 "track": 1,
-                "name": "1940",
-                "file": "btm003-1957"
+                "name": "1940/55",
+                "duration": "4:43",
+                "file": "btm001-1940:55"
             }, {
                 "track": 2,
                 "name": "1956",
                 "duration": "8:30",
-                "file": "btm010-1956.mp3"
+                "file": "btm002-1956"
             }, {
                 "track": 3,
-                "name": "All The King's Men - Broadwing Studio (Final Mix)",
+                "name": "1957",
                 "duration": "5:01",
-                "file": "BS_ATKM"
+                "file": "btm003-1957"
             }, {
                 "track": 4,
-                "name": "The Forsaken - Broadwing Studio (First Mix)",
+                "name": "1958",
                 "duration": "8:31",
-                "file": "BSFM_TF"
+                "file": "btm004-1958"
             }, {
                 "track": 5,
-                "name": "All The King's Men - Broadwing Studio (First Mix)",
+                "name": "1959",
                 "duration": "5:05",
-                "file": "BSFM_ATKM"
+                "file": "btm005-1959"
             }, {
                 "track": 6,
-                "name": "All This Is - Alternate Cuts",
+                "name": "1960",
                 "duration": "2:48",
-                "file": "AC_ATI"
+                "file": "btm006-1960"
             }, {
                 "track": 7,
-                "name": "All The King's Men (Take 1) - Alternate Cuts",
+                "name": "1961",
                 "duration": "5:44",
-                "file": "AC_ATKMTake_1"
+                "file": "btm007-1961"
             }, {
                 "track": 8,
-                "name": "All The King's Men (Take 2) - Alternate Cuts",
+                "name": "1962",
                 "duration": "5:26",
-                "file": "AC_ATKMTake_2"
+                "file": "btm008-1962"
             }, {
                 "track": 9,
-                "name": "Magus - Alternate Cuts",
+                "name": "1963",
                 "duration": "5:46",
-                "file": "AC_M"
+                "file": "btm009-1963"
             }, {
                 "track": 10,
-                "name": "The State Of Wearing Address (fucked up) - Alternate Cuts",
+                "name": "1964",
                 "duration": "5:25",
-                "file": "AC_TSOWAfucked_up"
+                "file": "btm010-1964"
             }, {
                 "track": 11,
-                "name": "Magus - Popeye's (New Years '04 - '05)",
+                "name": "1965",
                 "duration": "5:53",
-                "file": "PNY04-05_M"
+                "file": "btm011-1965"
             }, {
                 "track": 12,
-                "name": "On The Waterfront - Popeye's (New Years '04 - '05)",
+                "name": "1966",
                 "duration": "4:40",
-                "file": "PNY04-05_OTW"
+                "file": "btm012-1966"
             }, {
                 "track": 13,
-                "name": "Trance - Popeye's (New Years '04 - '05)",
+                "name": "1967",
                 "duration": "13:15",
-                "file": "PNY04-05_T"
+                "file": "btm013-1967"
             }, {
                 "track": 14,
-                "name": "The Forsaken - Popeye's (New Years '04 - '05)",
+                "name": "1968",
                 "duration": "8:12",
-                "file": "PNY04-05_TF"
+                "file": "btm014-1968"
             }, {
                 "track": 15,
-                "name": "The State Of Wearing Address - Popeye's (New Years '04 - '05)",
+                "name": "1969",
                 "duration": "7:02",
-                "file": "PNY04-05_TSOWA"
+                "file": "btm015-1969"
             }, {
                 "track": 16,
-                "name": "Magus - Popeye's (Valentine's Day '05)",
+                "name": "1970",
                 "duration": "5:43",
-                "file": "PVD_M"
-            }, {
-                "track": 17,
-                "name": "Trance - Popeye's (Valentine's Day '05)",
-                "duration": "10:45",
-                "file": "PVD_T"
-            }, {
-                "track": 18,
-                "name": "The State Of Wearing Address - Popeye's (Valentine's Day '05)",
-                "duration": "5:36",
-                "file": "PVD_TSOWA"
-            }, {
-                "track": 19,
-                "name": "All This Is - Smith St. Basement (01/08/04)",
-                "duration": "2:48",
-                "file": "SSB01_08_04_ATI"
-            }, {
-                "track": 20,
-                "name": "Magus - Smith St. Basement (01/08/04)",
-                "duration": "5:46",
-                "file": "SSB01_08_04_M"
-            }, {
-                "track": 21,
-                "name": "Beneath The Painted Eye - Smith St. Basement (06/06/03)",
-                "duration": "13:07",
-                "file": "SSB06_06_03_BTPE"
-            }, {
-                "track": 22,
-                "name": "Innocence - Smith St. Basement (06/06/03)",
-                "duration": "5:16",
-                "file": "SSB06_06_03_I"
-            }, {
-                "track": 23,
-                "name": "Magus - Smith St. Basement (06/06/03)",
-                "duration": "5:46",
-                "file": "SSB06_06_03_M"
-            }, {
-                "track": 24,
-                "name": "Madness Explored - Smith St. Basement (06/06/03)",
-                "duration": "4:51",
-                "file": "SSB06_06_03_ME"
-            }, {
-                "track": 25,
-                "name": "The Forsaken - Smith St. Basement (06/06/03)",
-                "duration": "8:43",
-                "file": "SSB06_06_03_TF"
-            }, {
-                "track": 26,
-                "name": "All This Is - Smith St. Basement (12/28/03)",
-                "duration": "3:00",
-                "file": "SSB12_28_03_ATI"
-            }, {
-                "track": 27,
-                "name": "Magus - Smith St. Basement (12/28/03)",
-                "duration": "6:09",
-                "file": "SSB12_28_03_M"
-            }, {
-                "track": 28,
-                "name": "Madness Explored - Smith St. Basement (12/28/03)",
-                "duration": "5:05",
-                "file": "SSB12_28_03_ME"
-            }, {
-                "track": 29,
-                "name": "Trance - Smith St. Basement (12/28/03)",
-                "duration": "12:32",
-                "file": "SSB12_28_03_T"
-            }, {
-                "track": 30,
-                "name": "The Forsaken - Smith St. Basement (12/28/03)",
-                "duration": "8:56",
-                "file": "SSB12_28_03_TF"
-            }, {
-                "track": 31,
-                "name": "All This Is (Take 1) - Smith St. Basement (Nov. '03)",
-                "duration": "4:55",
-                "file": "SSB___11_03_ATITake_1"
-            }, {
-                "track": 32,
-                "name": "All This Is (Take 2) - Smith St. Basement (Nov. '03)",
-                "duration": "5:45",
-                "file": "SSB___11_03_ATITake_2"
-            }, {
-                "track": 33,
-                "name": "Beneath The Painted Eye (Take 1) - Smith St. Basement (Nov. '03)",
-                "duration": "14:05",
-                "file": "SSB___11_03_BTPETake_1"
-            }, {
-                "track": 34,
-                "name": "Beneath The Painted Eye (Take 2) - Smith St. Basement (Nov. '03)",
-                "duration": "13:25",
-                "file": "SSB___11_03_BTPETake_2"
-            }, {
-                "track": 35,
-                "name": "The Forsaken (Take 1) - Smith St. Basement (Nov. '03)",
-                "duration": "8:37",
-                "file": "SSB___11_03_TFTake_1"
-            }, {
-                "track": 36,
-                "name": "The Forsaken (Take 2) - Smith St. Basement (Nov. '03)",
-                "duration": "8:36",
-                "file": "SSB___11_03_TFTake_2"
+                "file": "btm016-1970"
             }],
             buildPlaylist = $.each(tracks, function(key, value) {
                 var trackNumber = value.track,
