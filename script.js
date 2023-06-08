@@ -14,7 +14,7 @@ jQuery(function ($) {
                 'volume',
             ]
         });
-        // initialize playlist and controls
+        //  playlist and controls
         var index = 0,
             playing = false,
             mediaPath = './audio/',
@@ -107,8 +107,8 @@ jQuery(function ($) {
                 if (trackNumber.toString().length === 1) {
                     trackNumber = '0' + trackNumber;
                 }
-                $('#plList').append('<li> \
-                    <div class="plItem"> \
+                $('#plList').append('<li> <a id="' + trackNumber +'"></a> \
+                    <div class="plItem" > \
                         <span class="plNum">' + trackNumber + '.</span> \
                         <span class="plTitle">' + trackName + '</span> \
                         <span class="plLength">' + trackDuration + '</span> \
@@ -120,12 +120,12 @@ jQuery(function ($) {
             npTitle = $('#npTitle'),
             audio = $('#audio1').on('play', function () {
                 playing = true;
-                npAction.text('Now Playing...');
+                npAction.text('Reproduciendo...');
             }).on('pause', function () {
                 playing = false;
-                npAction.text('Paused...');
+                npAction.text('|| Pausa ||');
             }).on('ended', function () {
-                npAction.text('Paused...');
+                npAction.text('|| Pausa ||');
                 if ((index + 1) < trackCount) {
                     index++;
                     loadTrack(index);
