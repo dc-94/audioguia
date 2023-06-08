@@ -12,24 +12,29 @@
 
 </head>
 <body>
-    <a href="#14">oooo</a>
+    <header>
+        <img class="headlogo" src="./img/logo.png" alt="">
+    </header>
 <div class="container">
     <div class="column add-bottom">
         <div id="mainwrap">
             <div id="plwrap">
                 <ul id="plList"></ul>
             </div>
-            <div id="nowPlay">
-                <span id="npAction">Paused...</span>
-                
-                <div id="tracks">
-                    <a id="btnPrev"><i class="ri-skip-back-mini-fill"></i></a><span id="npTitle"></span><a id="btnNext"><i class="ri-skip-forward-mini-fill"></i></a>
-                </div>
-            </div>
             <div id="audiowrap">
                 <div id="audio0">
                     <audio id="audio1" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
                 </div>
+            <div id="nowPlay">
+                <div>
+                <span id="npTitle"></span>
+                </div>
+                <div id="tracks">
+                    <a id="btnPrev"><i class="ri-skip-back-mini-fill"></i></a>
+                    <span id="npAction">Paused...</span>
+                    <a id="btnNext"><i class="ri-skip-forward-mini-fill"></i></a>
+                </div>
+            </div>
             </div>
         </div>
     </div>
