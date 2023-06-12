@@ -6,28 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet' href='https://cdn.plyr.io/3.6.2/plyr.css'>
-    <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
     <header>
         <img class="headlogo" src="./img/logo.png" alt="">
     </header>
+
 <div class="container">
     <div class="column add-bottom">
         <div id="mainwrap">
-            <div id="plwrap">
+            <div id="plwrap">            
                 <ul id="plList"></ul>
             </div>
             <div id="audiowrap">
                 <div id="audio0">
-                    <audio id="audio1" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+                    <audio id="audio1" preload autoplay controls>Tu  navegador  no soporta Audio! 😢</audio>
                 </div>
             <div id="nowPlay">
                 <div>
-                <span id="npTitle"></span>
+                <span id="npTitle" ></span>
                 </div>
                 <div id="tracks">
                     <a id="btnPrev"><i class="ri-skip-back-mini-fill"></i></a>
@@ -39,9 +40,13 @@
         </div>
     </div>
 </div>
-<!-- partial -->
+
+<!-- JS SOURCE -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/html5media/1.1.8/html5media.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.min.js'></script><script  src="./script.js"></script>
 
 </body>

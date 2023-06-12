@@ -11,7 +11,7 @@ jQuery(function ($) {
                 'progress',
                 'current-time',
                 'mute',
-                'volume',
+                'autoplay',
             ]
         });
         //  playlist and controls
@@ -107,12 +107,34 @@ jQuery(function ($) {
                 if (trackNumber.toString().length === 1) {
                     trackNumber = '0' + trackNumber;
                 }
-                $('#plList').append('<li> <a id="' + trackNumber +'"></a> \
-                    <div class="plItem" > \
-                        <span class="plNum">' + trackNumber + '.</span> \
-                        <span class="plTitle">' + trackName + '</span> \
-                        <span class="plLength">' + trackDuration + '</span> \
-                    </div> \
+                $('#plList').append('<li>  \
+                        <div class="plItem" > \
+                            <span class="plNum">' + trackNumber + '.</span> \
+                             <span class="plTitle">' + trackName + '</span> \
+                            <span class="plLength">\
+                            <!-- Button  modal --> \
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal' + trackNumber + '"> \
+                                Leer  mas</button> \</span> \
+                        </div> \
+     <!-- Modal con # de track -->\
+                        <div class="modal fade" id="Modal' + trackNumber + '" tabindex="-1" aria-labelledby="ModalLabel' + trackNumber + '" aria-hidden="true">\
+                          <div class="modal-dialog modal-dialog-scrollable">\
+                            <div class="modal-content">\
+                              <div class="modal-header">\
+                                <h1 class="modal-title fs-5" id="ModalLabel' + trackNumber + '">Modal title</h1>\
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>\
+                              </div>\
+                              <div class="modal-body">\
+                                <p>' +trackName + '</p>\
+     <!-- BTN Play en Modal -->\
+                                <svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-pause"></use></svg>\
+                                <svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="#plyr-play"></use></svg>\
+                                <span class="label--pressed plyr__sr-only">Pause</span>\
+                                <span class="label--not-pressed plyr__sr-only">Play</span>\
+                              </div>\
+                            </div>\
+                          </div>\
+                        </div>\
                 </li>');
             }),
             trackCount = tracks.length,
@@ -185,7 +207,8 @@ jQuery(function ($) {
                 loadTrack(id);
                 audio.play();
             };
-        extension = audio.canPlayType('audio/mpeg') ? '.mp3' : '';
+            extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
+            loadTrack(index);
         loadTrack(index);
     } else {
         // no audio support
@@ -194,3 +217,13 @@ jQuery(function ($) {
         $('.container').append('<p class="no-support">' + noSupport + '</p>');
     }
 });
+$(document).ready(function () {
+    $('.modal').each(function () {
+        const modalId = `#${$(this).attr('id')}`;
+        if (window.location.href.indexOf(modalId) !== -1) {
+            $(modalId).modal('show');
+        }
+    });
+});
+
+
