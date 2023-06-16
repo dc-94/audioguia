@@ -82,6 +82,25 @@ img{
     align-self: center;
     margin: auto;
 }
+
+/*  Modal 
+================================================== */
+.modal-content{
+    background: #414141;
+}
+.modal-content p{
+    color: #f9f9f9;
+}
+br{
+    margin: 0.5rem;
+}
+.modal-header{
+    height: 100px;
+}
+.modal-footer svg{
+    height: 2rem;
+}
+
 /*  Player 
 ================================================== */
 
@@ -101,6 +120,9 @@ height: auto;
 bottom: 0;
 left: 0;
 background-color: #111111;
+}
+.plyr__controls{
+    padding: 0.2rem !important;
 }
 #plwrap{
     margin-top: 2.5rem;
@@ -136,7 +158,7 @@ width:auto;
 }
 
 #nowPlay span#npTitle {
-padding:1rem;
+padding:0.5rem;
 text-align:center;
 font-weight: 600;
 font-size: 2.5rem;
