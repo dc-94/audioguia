@@ -19,11 +19,18 @@ jQuery(function ($) {
             mediaPath = './audio/',
             extension = '',
             tracks = [{
-                "track": 1,
-                "name": "1940-1955 - Antes de…",
+                "track": 0,
+                "name": "---",
                 "duration": "4:43",
-                "file": "btm001-1940:55",
-                "description":"Reino Unido bombardeado, año de nacimiento de Ringo y de John.<br>La infancia de los 4, sus familias, sus escuelas.<br>George conoce a Paul, mismo uniforme, mismo bus, mismo camino y un mismo afecto por las guitarras y la música…",
+                "file": "btm002-1956",
+                "description":"---",
+                "headerIMG":"./img/modal_img/40-55.jpg"
+            }, {
+                "track": 1,
+                "name": "1940/55 - Antes de…",
+                "duration": "4:43",
+                "file": "btm002-1956",
+                "description":"Reino Unido bombardeado, año de nacimiento de Ringo y de John.<br>La infancia de los 4, sus familias, sus escuelas.<br>George conoce a Paul, mismo uniforme, mismo bus, mismo camino y un mismo afecto por las guitarras y la música.",
                 "headerIMG":"./img/modal_img/40-55.jpg"
             }, {
                 "track": 2,
@@ -52,7 +59,7 @@ jQuery(function ($) {
                 "duration": "5:05",
                 "file": "btm005-1959",
                 "description":"La rotura del grupo que debía tocar esa noche, hace que de Quarrymen quede como la banda de los sábados en el Casbah.",
-                "headerIMG":"./img/modal_img/.jpg"
+                "headerIMG":"./img/modal_img/59.jpg"
             }, {
                 "track": 6,
                 "name": "1960 - The Silver Beatles hacia Hamburgo",
@@ -163,9 +170,11 @@ jQuery(function ($) {
                                 <p>' +trackDescription + '</p>\
      <!-- BTN Play en Modal -->\
                                 </div>\
-                                <use xlink:href="#plyr-play"><div class="modal-footer">\
-                                <p>Reproducir</p><i class="ri-play-fill"></i>\
-                                </div></use>\
+                                <use xlink:href="#plyr-play">\
+                                    <div class="modal-footer">\
+                                        <p>Reproducir</p><i class="ri-play-fill"></i>\
+                                    </div>\
+                                </use>\
                               </div>\
                             </div>\
                           </div>\
@@ -260,5 +269,3 @@ $(document).ready(function () {
         }
     });
 });
-
-
