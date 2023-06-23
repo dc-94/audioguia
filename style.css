@@ -8,7 +8,7 @@ html,body {
 -webkit-font-smoothing:antialiased;
 background-color:#202020;
 color:#fff7e6;
-font-size:16px;
+font-size:14px;
 font-family: 'Montserrat', sans-serif;
 font-weight:400;
 letter-spacing:.025rem;
@@ -91,7 +91,7 @@ img{
     padding: 0 ;
 }
 .modal-body p{
-    padding: 1.5rem;
+    padding: 1.3rem;
 }
 .modal-content{
     background: #1f1f1f;
@@ -109,14 +109,14 @@ br{
     background-color: #ff795b !important
 }
 .modal-image {
-    height: 35vh;
+    height: 30vh;
     overflow: hidden;
     align-items: center;
     justify-content: center;
 }
 .modal-image img{
     padding: 0;
-    width: 100%;
+    width: 95%;
     height: auto;
 }
 .modal-footer{
@@ -203,8 +203,8 @@ ul{
 cursor:pointer;
 display:block;
 margin:0;
-padding:1rem 0.2rem;
-height: 4rem;
+padding:.8rem 0.2rem;
+height: 3.5rem;
 border-bottom: #b0ae6973 solid 2px;
 }
 #plList > li:first-child{
