@@ -29,7 +29,7 @@ jQuery(function ($) {
                 "track": 1,
                 "name": "1940/55 - Antes de…",
                 "duration": "4:43",
-                "file": "btm002-1956",
+                "file": "btm001-194055",
                 "description":"Reino Unido bombardeado, año de nacimiento de Ringo y de John.<br>La infancia de los 4, sus familias, sus escuelas.<br>George conoce a Paul, mismo uniforme, mismo bus, mismo camino y un mismo afecto por las guitarras y la música.",
                 "headerIMG":"./img/modal_img/40-55.jpg"
             }, {
